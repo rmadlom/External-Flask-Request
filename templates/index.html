@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<html>
+  <head>
+    <meta charset="utf-8">
+    {% if title %}
+    <title>{{title}}</title>
+    {% else %}
+    <title>Alarms</title>
+    {% endif %}
+  </head>
+  <body>
+    <h1>Alarms</h1>
+    <br><br>
+    <button class="button button1">Alarm 1</button><br>
+    {% if data %}
+      <h1> Data is: {{data.Alarmtype}}</h1>
+      <style>
+      .button1 {background-color: green;}
+      </style>
+    {% else %}
+      <h1> Not Triggered </h1>
+    {% endif %}
+  </body>
+</html>
